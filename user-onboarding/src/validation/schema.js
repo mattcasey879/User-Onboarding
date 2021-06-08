@@ -9,7 +9,9 @@ const formSchema = yup.object().shape({
     email: yup
         .string()
         .email('Must be a valid email address')
-        .required('Email is required')
+        .required('Email is required'),
+    terms: yup
+        .boolean()
 })
 
 export default formSchema

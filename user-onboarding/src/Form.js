@@ -2,7 +2,7 @@ import React from 'react';
 
 
  export default function Form (props) {
-     const { values, change, submit } = props;
+     const { values, change, submit, disabled } = props;
 
      const onSubmit = (event) => {
          event.preventDefault();
@@ -10,7 +10,7 @@ import React from 'react';
      }
 
      const onChange = (event) => {
-         const { name, value, checked, type } = event.target;
+         const { name, value, checked, type, } = event.target;
          const valueToUse = type === 'checkbox' ? checked : value;
          change(name, valueToUse)
      }
@@ -29,7 +29,7 @@ import React from 'react';
                  <label>Agree to Terms of Service:
                     <input type='checkbox' name='terms' checked={values.terms} onChange={onChange}/>
                  </label>
-                <button>Submit</button>
+                <button disabled={disabled}>Submit</button>
             </form>
          </div>
      )
