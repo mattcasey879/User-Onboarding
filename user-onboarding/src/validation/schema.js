@@ -10,8 +10,12 @@ const formSchema = yup.object().shape({
         .string()
         .email('Must be a valid email address')
         .required('Email is required'),
+    password: yup 
+        .string()
+        .required('Password is required'),
     terms: yup
         .boolean()
+        .required()
 })
 
 export default formSchema

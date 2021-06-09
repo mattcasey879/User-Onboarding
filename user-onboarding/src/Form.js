@@ -1,18 +1,19 @@
 import React from 'react';
 
 
+
  export default function Form (props) {
      const { values, change, submit, disabled } = props;
 
      const onSubmit = (event) => {
          event.preventDefault();
-         submit()
+         submit();
      }
 
      const onChange = (event) => {
          const { name, value, checked, type, } = event.target;
          const valueToUse = type === 'checkbox' ? checked : value;
-         change(name, valueToUse)
+         change(name, valueToUse);
      }
      return (
          <div className='form'>
