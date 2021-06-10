@@ -3,7 +3,7 @@ import React from 'react';
 
 
  export default function Form (props) {
-     const { values, change, submit, disabled } = props;
+     const { values, change, submit, disabled , errors } = props;
 
      const onSubmit = (event) => {
          event.preventDefault();
@@ -16,6 +16,15 @@ import React from 'react';
          change(name, valueToUse);
      }
      return (
+         <div>
+             <div>{errors.username}</div>
+             <div>{errors.email}</div>
+             <div>{errors.password}</div>
+             <div>{errors.terms}</div>
+             
+         <div className='form'></div>
+         <div className='form'></div>
+         <div className='form'></div>
          <div className='form'>
              <form onSubmit={onSubmit}>
                  <label>Name:
@@ -32,6 +41,8 @@ import React from 'react';
                  </label>
                 <button disabled={disabled}>Submit</button>
             </form>
+         </div>
+         
          </div>
      )
  }

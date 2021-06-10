@@ -15,7 +15,7 @@ const formSchema = yup.object().shape({
         .required('Password is required'),
     terms: yup
         .boolean()
-        .required()
+        .required('Please agree to terms')
 })
 
 export default formSchema
