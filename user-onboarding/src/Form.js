@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './App.css'
 
 
  export default function Form (props) {
@@ -16,19 +16,19 @@ import React from 'react';
          change(name, valueToUse);
      }
      return (
-         <div>
-             <div>{errors.username}</div>
-             <div>{errors.email}</div>
-             <div>{errors.password}</div>
-             <div>{errors.terms}</div>
+         <div className='container'>
+             <div className='error-msg'>
+                <div name='val-user'>{errors.first_name}</div>
+                <div>{errors.email}</div>
+                <div>{errors.password}</div>
+                <div>{errors.terms}</div>
+             </div>
              
-         <div className='form'></div>
-         <div className='form'></div>
-         <div className='form'></div>
          <div className='form'>
+             <h1 className='title'>Please fill out this form:</h1>
              <form onSubmit={onSubmit}>
                  <label>Name:
-                     <input type='text' name='username' value={values.username} onChange={onChange}/>
+                     <input type='text' name='first_name' value={values.first_name} onChange={onChange}/>
                  </label>
                  <label>Email:
                      <input type='text' name='email' value={values.email} onChange={onChange}/>
@@ -39,7 +39,7 @@ import React from 'react';
                  <label>Agree to Terms of Service:
                     <input type='checkbox' name='terms' checked={values.terms} onChange={onChange}/>
                  </label>
-                <button id='button' disabled={disabled}>Submit</button>
+                <div className='button-container'><button id='button' disabled={disabled}>Submit</button></div>
             </form>
          </div>
          

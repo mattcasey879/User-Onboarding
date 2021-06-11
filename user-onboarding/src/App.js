@@ -4,16 +4,17 @@ import Form from './Form'
 import axios from 'axios'
 import * as yup from 'yup'
 import schema from './validation/schema'
+import User from './User'
 
 const intialUsers = [];
 const intialformValues = {
-  username: '',
+  first_name: '',
   email: '',
   password: '',
   terms: false
 }
 const intitialErrors = {
-  username: '',
+  first_name: '',
   email: '',
   password: '',
 }
@@ -59,7 +60,7 @@ const postNewUser = newUser => {
 
 const submitForm = () => {
   const newUser = {
-    username: formValues.username.trim(),
+    first_name: formValues.first_name.trim(),
     email: formValues.email.trim(),
     terms: formValues.terms
   }
@@ -82,6 +83,10 @@ const change =  (name, value) => {
       disabled={disabled}
       errors={errors}
       />
+      <User 
+      users={users}
+      />
+
     </div>
   );
 }

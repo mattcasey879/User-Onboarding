@@ -1,0 +1,54 @@
+#root{
+    margin-top: -30px;
+    background-color: #1A2238;
+    box-sizing: border-box;
+}
+
+.error-msg{
+    font-weight: bolder;
+    color:red;
+}
+form{
+    display: flex;
+    align-items: center;
+    color:white
+}
+
+form label {
+    padding:2%;
+    text-align:center;
+}
+form label input{
+    padding-left: 5%;
+}
+ form #button {
+    padding: 0;
+    height: auto;
+}
+
+.button-container{
+    padding:3%;
+}
+
+button {
+    width: 100px;
+    height:60px;
+}
+.title {
+    padding-left: 10%;
+    color: dodgerblue;
+}
+
+.all-users{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+}
+.user {
+    border: solid grey 1px;
+    border-radius: 10px;;
+    margin: 3% 0;
+    width: 40%;
+    text-align: center;
+}
