@@ -80,7 +80,8 @@ const change =  (name, value) => {
       change={change}
       submit={submitForm}
       disabled={disabled}
-      errors={errors}/>
+      errors={errors}
+      />
     </div>
   );
 }

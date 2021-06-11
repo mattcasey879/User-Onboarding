@@ -39,7 +39,7 @@ import React from 'react';
                  <label>Agree to Terms of Service:
                     <input type='checkbox' name='terms' checked={values.terms} onChange={onChange}/>
                  </label>
-                <button disabled={disabled}>Submit</button>
+                <button id='button' disabled={disabled}>Submit</button>
             </form>
          </div>
          
